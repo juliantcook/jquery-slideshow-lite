@@ -97,7 +97,9 @@
       var j = 0;
       $("a", target).each(function(){
         pagination.append("<li><a href=\"#\">" + i++ + "</a></li>");
-        caption.append("<div>" + $("img:nth(" + j++ + ")", target).attr("alt") + "</div>");
+        var img = $("img:nth(" + j++ + ")", target);
+        var captionClass = img.attr("data-caption-class");
+        caption.append("<div" + (captionClass ? (' class="' + captionClass + '"') : ("")) + ">" + img.attr("alt") + "</div>");
       });
       pagination.fadeTo(0, 0.8);
       caption.fadeTo(0, 0.6);
