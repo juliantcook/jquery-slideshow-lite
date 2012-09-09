@@ -183,7 +183,14 @@
       var startSlideshow = function(){
         clearInterval(instance);
         makeSlideshow();
-        instance = setInterval(makeSlideshow, options.pauseSeconds*1000);
+        if(items.size() > 1)
+        {
+          instance = setInterval(makeSlideshow, options.pauseSeconds*1000);
+        }
+        else
+        {
+          pagination.hide();
+        }
       };
 
       // ----------------------------------------
