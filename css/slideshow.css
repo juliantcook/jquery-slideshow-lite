@@ -20,8 +20,7 @@
 
 /* pagination control */
 
-.slideshowlite ul,
-.slideshowlite ol {
+.slideshowlite ul {
 	list-style: none;
 	position: absolute;
 	margin: 0;
@@ -66,7 +65,7 @@
 	
 /* caption control */
 
-.slideshowlite ol {
+.slideshowlite .captions {
 	top: 5px;
 	position: relative;
 	overflow: hidden;
@@ -77,6 +76,6 @@
 	padding: 3px 10px;
 }
 
-	.slideshowlite ol li {
+	.slideshowlite .captions div {
 		width: 100%;
 	}

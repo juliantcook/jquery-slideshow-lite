@@ -89,15 +89,15 @@
       // ----------------------------------------
 
       $(target).append("<ul></ul>");
-      $(target).append("<ol></ol>");
+      $(target).append("<div class=\"captions\"></div>");
       var pagination = $("> ul", target);
-      var caption = $("> ol", target);
+      var caption = $("> .captions", target);
 
       var i = 1;
       var j = 0;
       $("a", target).each(function(){
         pagination.append("<li><a href=\"#\">" + i++ + "</a></li>");
-        caption.append("<li>" + $("img:nth(" + j++ + ")", target).attr("alt") + "</li>");
+        caption.append("<div>" + $("img:nth(" + j++ + ")", target).attr("alt") + "</div>");
       });
       pagination.fadeTo(0, 0.8);
       caption.fadeTo(0, 0.6);
@@ -126,8 +126,8 @@
 
       var showCaption = function(sequence){
         caption.show();
-        $("> li", caption).hide();
-        $("> li:nth(" + sequence + ")", caption).fadeIn();
+        $("> div", caption).hide();
+        $("> div:nth(" + sequence + ")", caption).fadeIn();
       }
 
       // ----------------------------------------
