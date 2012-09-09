@@ -129,7 +129,11 @@
       var showCaption = function(sequence){
         caption.show();
         $("> div", caption).hide();
-        $("> div:nth(" + sequence + ")", caption).fadeIn();
+        var capt = $("> div:nth(" + sequence + ")", caption);
+        if ( capt.html() )
+        {
+          capt.fadeIn();
+        }
       }
 
       // ----------------------------------------
