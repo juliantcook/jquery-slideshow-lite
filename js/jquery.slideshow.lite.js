@@ -102,7 +102,7 @@
         caption.append("<div" + (captionClass ? (' class="' + captionClass + '"') : ("")) + ">" + img.attr("alt") + "</div>");
       });
       pagination.fadeTo(0, 0.8);
-      caption.fadeTo(0, 0.6);
+      caption.fadeIn();
       caption.hide();
 
       // ----------------------------------------
